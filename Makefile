@@ -4,7 +4,7 @@ INCLUDE_DIRS := include /usr/local/include /opt/local/include /home/ubuntu/work/
 CXXFLAGS      = -std=c++11 -Wall -g $(addprefix -I,$(INCLUDE_DIRS))
 SRC           = $(wildcard src/*.cpp)
 OBJ           = $(subst .cpp,.o,$(SRC))
-CLEANLIST     = bin/runner $(OBJ)
+CLEANLIST     = bin/tutorial $(OBJ)
 LDFLAGS       = /home/ubuntu/work/src/mongo-cxx-driver-nightly/build/libmongoclient.a -lboost_thread -lboost_filesystem -lboost_program_options
 LD_LIBRARY_PATH += /usr/local/lib
 
