@@ -34,8 +34,9 @@ int main() {
   try {
     runner::Runner()();
     std::cout << "All good." << std::endl;
+    return EXIT_SUCCESS;
   } catch( const mongo::DBException &e ) {
-    std::cout << "caught " << e.what() << std::endl;
+    std::cerr << "caught " << e.what() << std::endl;
+    return EXIT_FAILURE;
   }
-  return EXIT_SUCCESS;
 }
